@@ -1,4 +1,4 @@
-# dom-exercises
+# Dom-exercises
 
 
 ## Exercise #1 (1): Changing text
