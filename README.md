@@ -1,4 +1,5 @@
 # Dom-exercises
+![](https://tenor.com/view/panda-rage-gif-10192107)
 
 
 ## Exercise #1 (1): Changing text
