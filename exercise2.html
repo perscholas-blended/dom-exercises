@@ -10,12 +10,26 @@
         border: 1px solid black;
       }
     </style>
-    <script>
-      /* TODO: write JS code here */
-
-    </script>
   </head>
   <body>
     <div id="mydiv" onclick="change()"></div>
-  </body>
+<script>
+  const colors = ["blue","red","green","yellow","orange"];
+  const random = Math.floor(Math.random()*colors.length);
+  const daBox = document.getElementById("mydiv");
+   
+  function change(){
+    daBox.style.backgroundColor = colors[random];
+    i = 0;
+    
+    if(daBox.style.backgroundColor === colors[i] && i < colors.length){
+      daBox.style.backgroundColor = colors[i++];
+      }else{
+         daBox.style.backgroundColor = colors[0];
+    }
+}/* TODO: write JS code here */
+
+</script>  
+</body>
 </html>
+
