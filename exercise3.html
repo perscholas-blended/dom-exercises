@@ -1,0 +1,38 @@
+<!--- Extend the previous exercise such that the div's initial color is chosen randomly.
+- Can you extend the code to work with an array of arbitrary colors? Whenever the div is clicked, change the color to the next on in the array (and start over after the last color). -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Exercise #2: Changing colors</title>
+    <style>
+      #mydiv {
+        width: 200px;
+        height: 200px;
+        border: 1px solid black;
+      }
+    </style>
+    
+  </head>
+  <body>
+    <div id="mydiv"></div>
+    
+    <script>
+      /* TODO: write JS code here */
+      const div = document.querySelector('#mydiv');
+      
+    function randomColor(){
+    let rgb = [];
+
+    for(var i = 0; i < 3; i++)
+    rgb.push(Math.floor(Math.random() * 255));
+    
+    div.style.backgroundColor = 'rgb('+ rgb.join(',') +')';
+    }
+    div.addEventListener('click', randomColor());
+
+    </script>
+  </body>
+</html>
