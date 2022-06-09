@@ -21,9 +21,18 @@
   </head>
   <body>
    
-    <div id="mydiv" >Hello world</div>
+    <div id="mydiv" ><span style='color:red'>H</span>ello world</div>
     <script>
-      //code here
+      const div = document.querySelector('#mydiv');
+      const divOrigText = div.innerText;
+
+      div.addEventListener('mouseenter', window.onload=() => {
+        div.textContent = 'Can I help you?';
+      });
+      
+      div.addEventListener('mouseout', window.onload=() => {
+        div.textContent = divOrigText;
+      });
     </script>
   </body>
 </html>
