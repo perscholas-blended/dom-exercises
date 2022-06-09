@@ -10,12 +10,81 @@
         border: 1px solid black;
       }
     </style>
-    <script>
-      /* TODO: write JS code here */
 
-    </script>
   </head>
   <body>
     <div id="mydiv" onclick="change()"></div>
+    <!-- <div id="mydiv"></div> -->
+
+    <script>
+// //part 2
+      // const box = document.querySelector('#mydiv')
+      // box.style.backgroundColor = '#0000FF';
+
+      // let color = ['#0000FF', '#00FF00', '#FF0000']
+      // let i = 0;
+      // box.addEventListener('click', function(){
+      //   i < color.length ? ++i : 0;
+      //   box.style.background = color[i]
+      //   console.log(i);
+      //   if (i == 2 ) {
+      //     i=-1;
+      //     console.log(i);
+      //   }
+      // })
+
+//Part 3
+
+function change() { let colors = ["blue", "red", "green", "yellow"];
+      i = 0;
+        let elementToChange = document.getElementById("mydiv");
+        elementToChange.addEventListener("click", function () {
+            elementToChange.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+            if (i >= colors.length) {
+              i = 0;
+            }
+          });
+      }
+
+
+
+
+
+
+    // document.querySelector('#mydiv').style.backgroundColor='orange';
+    // let randomColor = ['#FF0000', '#00FF00','#0000FF','#000000','#808080']
+    // let i = Math.round(Math.random() * (randomColor.length - 1))
+    // box.addEventListener('click', function(){
+    //   let elem,
+    //     len = arr.length;
+
+    //   while(len > 0) {
+
+    //   }
+    // })
+
+
+    
+
+
+
+  //   function shuffle () {
+  // let deck = buildDeck();
+  // let currentIndex = deck.length, temporaryValue, randomIndex;
+  
+  // while (currentIndex !== 0) {
+  //   randomIndex = Math.floor(Math.random() * currentIndex);
+  //   currentIndex -= 1;
+  //   temporaryValue = deck[currentIndex];
+  //   deck[currentIndex] = deck[randomIndex];
+  //   deck[randomIndex] = temporaryValue;
+  // }
+  // return deck;
+  //   }
+
+
+    </script>
+
+
   </body>
 </html>
