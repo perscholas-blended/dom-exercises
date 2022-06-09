@@ -24,6 +24,14 @@
     <div id="mydiv" >Hello world</div>
     <script>
       //code here
-    </script>
+     const yellowBox = document.querySelector('#mydiv');
+     //lets talk about the mouse being outside the box first, then we can get into what happens when mouse is inside the boxß
+     yellowBox.addEventListener('mouseout',window.onload= ()=> {yellowBox.textContent = 'Hello world' 
+    })
+    yellowBox.addEventListener('mouseover',window.onload =  ()=>{yellowBox.textContent = 'Can I help you?'})
+  //if you dont want to lag so much, refactor the above code by adding window.onload = ()
+
+  
+  </script>
   </body>
 </html>

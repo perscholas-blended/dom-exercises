@@ -10,12 +10,47 @@
         border: 1px solid black;
       }
     </style>
-    <script>
-      /* TODO: write JS code here */
-
-    </script>
+    
   </head>
   <body>
-    <div id="mydiv" onclick="change()"></div>
+    <div id="mydiv"></div>
+    
+    <script>
+      /* TODO: write JS code here */
+    const colorChange = document.getElementById('mydiv');
+    //set color to blue
+    colorChange.style.backgroundColor = 'blue';
+    //add event click to change to red
+    colorChange.addEventListener('click', ()=> {
+      const backgroundColor = colorChange.style.backgroundColor;
+      console.log(backgroundColor)
+      if(backgroundColor === 'blue'){
+        colorChange.style.backgroundColor = 'red'
+      }
+      else if(backgroundColor === 'red'){
+        colorChange.style.backgroundColor = 'green'
+      }
+      else {
+        colorChange.style.backgroundColor = 'blue'
+      }
+    })
+
+    //add event click to change to green
+    // colorChange.addEventListener('click', ()=> {colorChange.style.backgroundColor = 'green'})
+
+    // //add event click to change to blue
+    // colorChange.addEventListener('click', ()=> colorChange.style.backgroundColor = 'blue')
+
+
+
+    
+    
+
+
+    
+
+
+    
+    </script>
   </body>
 </html>
