@@ -23,7 +23,13 @@
    
     <div id="mydiv" >Hello world</div>
     <script>
-      //code here
+      let yellowBox = document.querySelector("#mydiv")
+      yellowBox.addEventListener("mouseout", window.onload=() => {
+        yellowBox.textContent= "Hello world";
+      });
+      yellowBox.addEventListener("mouseover", () => {
+        yellowBox.textContent= "Can I help you?";
+      });
     </script>
   </body>
 </html>
