@@ -23,7 +23,18 @@
    
     <div id="mydiv" >Hello world</div>
     <script>
-      //code here
+      // document.body.firstChild (doesn't work, selects text nodes w/ empty space)
+
+      let yellowBox = document.querySelector('#mydiv')
+      // OR document.getElementById('mydiv')
+
+      yellowBox.addEventListener('mouseout', () => {
+        yellowBox.textContent = "Hello world";
+      })
+      yellowBox.addEventListener('mouseover', () => {
+        yellowBox.textContent = "Can I help you?";
+      })
+
     </script>
   </body>
 </html>

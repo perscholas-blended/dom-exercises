@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Exercise #3: Randomizing initial color</title>
+    <style>
+      #mydiv {
+        width: 200px;
+        height: 200px;
+        border: 1px solid black;
+      }
+    </style>
+
+  </head>
+  <body>
+    <div id="mydiv" onclick="change()"></div>
+    <script>
+        
+
+
+
+
+
+
+      let newDiv = document.getElementById('mydiv');
+    
+    // const setBg = () => {
+    const randomColor = Math.floor(Math.random()*16777215).toString(16);
+    newDiv.style.backgroundColor = "#" + randomColor;
+    // color.innerHTML = "#" + randomColor;
+    // }
+
+    // addEventListener("click", setBg);
+    // setBg();     //  Works (with or without innerHTML line)  //
+    
+
+      let clickCount = 0;
+
+      newDiv.addEventListener('click', () => {
+
+        clickCount++;
+        
+        if (clickCount == 1) {
+          newDiv.style.backgroundColor = 'red'
+        }
+        else if (clickCount == 2) {
+          newDiv.style.backgroundColor = 'green'
+        }
+        else if (clickCount >= 3) {
+          clickCount = 0; newDiv.style.backgroundColor = 'blue'
+        }
+      })
+    </script>
+  </body>
+</html>

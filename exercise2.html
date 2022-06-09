@@ -10,12 +10,31 @@
         border: 1px solid black;
       }
     </style>
-    <script>
-      /* TODO: write JS code here */
 
-    </script>
   </head>
   <body>
     <div id="mydiv" onclick="change()"></div>
+    <script>
+      let newDiv = document.getElementById('mydiv');
+      newDiv.style.backgroundColor = 'blue';
+
+      let clickCount = 0;
+
+      newDiv.addEventListener('click', () => {
+
+        clickCount++;
+        
+        if (clickCount == 1) {
+          newDiv.style.backgroundColor = 'red'
+        }
+        else if (clickCount == 2) {
+          newDiv.style.backgroundColor = 'green'
+        }
+        else if (clickCount >= 3) {
+          clickCount = 0; 
+          newDiv.style.backgroundColor = 'blue'
+        }
+      })
+    </script>
   </body>
 </html>
