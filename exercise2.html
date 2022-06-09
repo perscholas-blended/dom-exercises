@@ -10,12 +10,106 @@
         border: 1px solid black;
       }
     </style>
-    <script>
-      /* TODO: write JS code here */
-
-    </script>
   </head>
   <body>
     <div id="mydiv" onclick="change()"></div>
+
+    <script>
+      // const mydiv1 = document.querySelector("#mydiv");
+
+      // mydiv1.style.backgroundColor = "blue";
+
+      // let colorIndex = 0;
+
+      // const change = () => {
+      //   colorIndex = colorIndex >= 2 ? 0 : colorIndex + 1;
+      //   console.log(colorIndex);
+      //   const color = ["blue", "red", "green"];
+      //   mydiv1.style.backgroundColor = color[colorIndex];
+      // };
+
+      //======================================================ex2
+      const mydiv1 = document.querySelector("#mydiv").style.backgroundColor;
+      mydiv1 = "orange";
+      // const init = () => {
+      //   var randomColor = Math.floor(Math.random() * 16777215).toString(16); // #000000 - #FFFFFF
+
+      //   mydiv1.style.backgroundColor = `#${randomColor.toUpperCase()}`;
+      // };
+      // init();
+
+      // let colorIndex = 0;
+
+      // const changeColor = () => {
+      //   // const color = ["blue", "red", "green"];
+      //   // colorIndex = colorIndex >= color.length ? 0 : colorIndex + 1;
+      //   colorIndex = colorIndex >= color.length ? 0 : colorIndex + 1;
+      //   const color = ["blue", "red", "green", init()];
+      //   // console.log(colorIndex);
+      //   mydiv1.style.backgroundColor = color[colorIndex];
+      // };
+
+      // mydiv1.addEventListener("click", changeColor);
+      //======================================================ex2
+      // const mydiv2 = document.querySelector("#mydiv").style.backgroundColor;
+      // mydiv2 = "black";
+      /* TODO: write JS code here
+       [This page](exercise2.html) contains a 200x200px div. Write JS code that sets the initial color of the div to blue, then changes the color when the div is clicked. On the first click, it changes from blue to red, on the next click from red to green, then from green to blue (and once it's blue, it starts all over again).
+      - In this exercise, you are only allowed to make changes inside ` and cannot change other parts of the HTML code.*/
+      //  const content = "Can I help you";
+
+      //  document.querySelector("div").addEventListener(
+      //    "mouseover",
+      //    (window.onload = () => {
+      //      document.querySelector("div").textContent = content;
+      //      document.querySelector("div").style.background = "red";
+      //      console.log("1");
+      //    })
+      //  );
+      //  document.querySelector("div").addEventListener(
+      //    "mouseout",
+      //    (window.onload = () => {
+      //      document.querySelector("div").textContent = "Hello world";
+      //      document.querySelector("div").style.background = "yellow";
+
+      //      console.log("2");
+      //    })
+      // document.body.style.backgroundColor = "red";
+
+      //   mydiv1.addEventListener(
+      //  "click",
+      //  window.onload = () => {
+      //   mydiv1.style.backgroundColor = "blue"
+      //  })
+      // mydiv1.style.backgroundColor = "blue";
+      // changecolor = "red";
+      // const changecolor = document.querySelector('div').style.backgroundColor
+      // changecolor = "blue";
+
+      // function chBackcolor(color) {
+      //     const color =  ["red","green","blue"]
+      //  mydiv1.style.backgroundColor  = color;
+      //  mydiv1.addEventListener(
+      //  "click",
+      //  window.onload = () => {
+      //   mydiv1.style.backgroundColor = "green"
+      //  })
+
+      // mydiv1.addEventListener("click", () => {
+      //   mydiv1.style.backgroundColor = "red";
+      // });
+      // mydiv1.addEventListener("click", () => {
+      //   mydiv1.style.backgroundColor = "green";
+      // });
+      // mydiv1.addEventListener("click", () => {
+      //   mydiv1.style.backgroundColor = "blue";
+      // });
+
+      //  mydiv1.addEventListener(
+      //  "click",
+      //  window.onload = () => {
+      //   mydiv1.style.backgroundColor = "blue"
+      //  })
+    </script>
   </body>
 </html>

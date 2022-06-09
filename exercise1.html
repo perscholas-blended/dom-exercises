@@ -14,16 +14,33 @@
         font-size: 2em;
         font-weight: bold;
       }
-
-     
     </style>
-    
   </head>
   <body>
-   
-    <div id="mydiv" >Hello world</div>
+    <div id="mydiv">Hello world</div>
     <script>
       //code here
+      //     ## Exercise #1 (1): Changing text
+      const content = "Can I help you";
+
+      document.querySelector("div").addEventListener(
+        "mouseover",
+        (window.onload = () => {
+          document.querySelector("div").textContent = content;
+          document.querySelector("div").style.background = "red";
+          console.log("1");
+        })
+      );
+      document.querySelector("div").addEventListener(
+        "mouseout",
+        (window.onload = () => {
+          document.querySelector("div").textContent = "Hello world";
+          document.querySelector("div").style.background = "yellow";
+
+          console.log("2");
+        })
+      );
+      // - Extend [this HTML page](exercise1.html) such that on moving the mouse over the yellow box the text changes to "Can I help you?". Then, when the mouse is moved outside the box the text changes back to "Hello world!".
     </script>
   </body>
 </html>
