@@ -10,12 +10,41 @@
         border: 1px solid black;
       }
     </style>
+
+  </head>
+  <body>
+
+    <div id="mydiv" onclick="change()"></div>    
+    
     <script>
       /* TODO: write JS code here */
 
+      /* Exercise #2:
+      contains a 200x200px div. Write JS code that sets the initial color of the div to blue, then changes the color when the div is clicked. On the first click, it changes from blue to red, on the next click from red to green, then from green to blue (and once it's blue, it starts all over again).
+
+         Exercise #3: Extend the previous exercise such that the div's initial color is chosen randomly.
+      Can you extend the code to work with an array of arbitrary colors? Whenever the div is clicked, change the color to the next on in the array (and start over after the last color).*/
+      
+      // const colors = ['red', 'green', 'blue'];
+      const colors = ['red', 'green', 'blue', 'purple', 'pink', 'yellow', 'orange'];
+
+      // let index = 0;
+      let randomIndex = Math.round((Math.random() * (colors.length - 1)))
+
+      const colorBox = document.getElementById('mydiv');
+      // colorBox.style.backgroundColor = 'blue';
+      colorBox.style.backgroundColor = colors[randomIndex];
+
+      colorBox.addEventListener('click', function onClick() {
+        // colorBox.style.backgroundColor = colors[index];
+        colorBox.style.backgroundColor = colors[randomIndex];
+
+        // index = index >= colors.length - 1 ? 0 : index + 1;
+        randomIndex = randomIndex >= colors.length - 1 ? 0 : randomIndex + 1;
+      })
+
     </script>
-  </head>
-  <body>
-    <div id="mydiv" onclick="change()"></div>
+
   </body>
+
 </html>
