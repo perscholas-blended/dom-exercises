@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Exercise #2: Changing colors</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            height: 100vh;
+            background-color: rgb(220, 236, 242);
+            /* border: 1px solid red; */
+            box-sizing: border-box;
+        }
+        
+        #mydiv {
+            --size: 500px;
+            position: relative;
+            width: var(--size);
+            height: var(--size);
+            /* border: 1px solid black; */
+            border-radius: 50%;
+            cursor: pointer;
+            box-shadow: 0 0 20px hsla(0, 0%, 100%, 0.5);
+        }
+        
+        #mydiv::before {
+            content: '(Click me, I dare you.)';
+            display: block;
+            position: absolute;
+            top: 0;
+            right: 0;
+            font-size: small;
+            transform: translateX(100%);
+            transition: 0.1s ease-out;
+            opacity: 0;
+        }
+        
+        #mydiv:hover:before {
+            opacity: 0.25;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="mydiv" onclick="change()"></div>
+    <script>
+        const box = document.querySelector('#mydiv'); // grab #mydiv
+        const colors = ['blue', 'red', 'limeGreen', 'yellow', 'orange']; //color array to iterate thru when the box is clicked
+        let index = Math.round(Math.random() * (colors.length - 1)); //random number based on length of the "colors" array
+
+        change(); // change the box's color when page loads
+
+        function change() {
+
+            box.style.backgroundColor = colors[index]; // set the background color of the mydiv to the current index position
+            index === colors.length - 1 ? index = 0 : index++; // reset the number if at the end of the array, otherwise increment index
+        }
+    </script>
+</body>
+
+</html>
