@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Exercise #3: Changing colors</title>
+    <style>
+      #mydiv {
+        width: 200px;
+        height: 200px;
+        border: 1px solid black;
+      }
+    </style>
+    
+  </head>
+  <body>
+    <div id="mydiv" onclick="change()"></div>
+    <script>
+      /* TODO: write JS code here */
+      
+      let colorChange = document.querySelector('#mydiv')
+      let colorArr = ['blue', 'red', 'green', 'yellow', 'orange', 'hotpink', 'purple','black']
+      let clicks = Math.floor(Math.random()*colorArr.length)
+      colorChange.setAttribute('style',`background-color: ${colorArr[clicks]}`)
+      
+      function change (){
+
+        clicks += 1
+
+        if(clicks >= colorArr.length){
+
+          clicks = 0
+
+        }
+
+        colorChange.style = `background-color: ${colorArr[clicks]}`
+
+      }
+    </script>
+  </body>
+</html>

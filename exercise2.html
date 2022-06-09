@@ -10,12 +10,31 @@
         border: 1px solid black;
       }
     </style>
-    <script>
-      /* TODO: write JS code here */
-
-    </script>
+    
   </head>
   <body>
     <div id="mydiv" onclick="change()"></div>
+    <script>
+      /* TODO: write JS code here */
+      
+      let colorChange = document.querySelector('#mydiv')
+      let colorArr = ['blue', 'red', 'green']
+      let clicks = 0
+      colorChange.setAttribute('style',`background-color: ${colorArr[0]}`)
+      
+      function change (){
+
+        clicks += 1
+
+        if(clicks > 2){
+
+          clicks = 0
+
+        }
+
+        colorChange.style = `background-color: ${colorArr[clicks]}`
+        
+      }
+    </script>
   </body>
 </html>
