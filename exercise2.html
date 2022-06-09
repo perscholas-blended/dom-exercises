@@ -7,15 +7,47 @@
       #mydiv {
         width: 200px;
         height: 200px;
+        border-radius: 50%;
         border: 1px solid black;
       }
     </style>
+    
+  <body>
+    <div id="mydiv" onclick="change()"></div>
+
+
     <script>
       /* TODO: write JS code here */
+      let colors = ['blue', 'red', 'green']
+      index = 0;
+      const myDiv = document.getElementById('mydiv');
+     
+
+      myDiv.onclick = function() {
+       myDiv.style.background = colors[index];  // set the color of body to the current color
+      index = (index + 1) % colors.length; // increment index to point to the next color (if it goes beyond the length of the coices array get it back to 0 using the modulo %)
+}
+
+
+      
+      // myDiv.style.backgroundColor = "blue"
+     
+      // myDiv.addEventListener('click', () => {
+      //   myDiv.style.backgroundColor = "red" 
+      
+      // } )
+
+      // myDiv.addEventListener('click', () => {
+      //   myDiv.style.backgroundColor = "green" 
+      // } )
+
+      
+
+
+
+      
 
     </script>
   </head>
-  <body>
-    <div id="mydiv" onclick="change()"></div>
   </body>
 </html>
