@@ -10,12 +10,29 @@
         border: 1px solid black;
       }
     </style>
-    <script>
-      /* TODO: write JS code here */
-
-    </script>
   </head>
   <body>
     <div id="mydiv" onclick="change()"></div>
+    <script>
+      const div = document.querySelector('#mydiv');
+
+      div.style.backgroundColor = 'blue';
+      let counter = 1;
+      
+      div.addEventListener('click', () => {
+        if(counter == 1) {
+          div.style.backgroundColor = 'red';
+          counter++;
+        }
+        else if(counter == 2) {
+          div.style.backgroundColor = 'green';
+          counter++;
+        }
+        else if(counter == 3) {
+          div.style.backgroundColor = 'blue';
+          counter = 1;
+        }
+      });
+    </script>
   </body>
 </html>
