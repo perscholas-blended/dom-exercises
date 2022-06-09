@@ -10,12 +10,27 @@
         border: 1px solid black;
       }
     </style>
-    <script>
-      /* TODO: write JS code here */
-
-    </script>
+    
   </head>
   <body>
     <div id="mydiv" onclick="change()"></div>
+    
+    <script>
+      let box = document.getElementById("mydiv")
+      let colors = ["blue","red",'green']
+      box.style.backgroundColor=colors[0]
+    
+      box.addEventListener("click", ()=>{
+        if(box.style.backgroundColor === colors[0]){
+          box.style.backgroundColor=colors[1]
+        }else if (box.style.backgroundColor===colors[1]){
+          box.style.backgroundColor=colors[2]
+        }else if (box.style.backgroundColor===colors[2]) {
+          box.style.backgroundColor=colors[0]
+        }
+        
+      })
+      </script>
+
   </body>
 </html>
