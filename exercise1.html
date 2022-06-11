@@ -20,10 +20,17 @@
     
   </head>
   <body>
-   
-    <div id="mydiv" >Hello world</div>
+
+    <div id="mydiv" onmouseover="mouseOver()" onmouseout="mouseOut()">Hello world</div>
     <script>
-      //code here
+      function mouseOver() {
+        let elementToChange = document.getElementById("mydiv");
+        elementToChange.innerText = "Can I help you?";
+      }
+      function mouseOut() {
+        let elementToChange = document.getElementById("mydiv");
+        elementToChange.innerText = "Hello world";
+      }
     </script>
   </body>
 </html>
