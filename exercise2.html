@@ -1,21 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Exercise #2: Changing colors</title>
-    <style>
-      #mydiv {
-        width: 200px;
-        height: 200px;
-        border: 1px solid black;
-      }
-    </style>
-    <script>
-      /* TODO: write JS code here */
 
-    </script>
-  </head>
-  <body>
-    <div id="mydiv" onclick="change()"></div>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <title>Exercise #2: Changing colorsArray</title>
+  <style>
+    #mydiv {
+      width: 200px;
+      height: 200px;
+      border: 1px solid black;
+    }
+  </style>
+
+</head>
+
+<body>
+  <div id="mydiv" onclick="change()"></div>
+</body>
+<script>
+  function change() {
+    let colorsArray = ["blue", "red", "green", "yellow", "orange"];
+    let divElem = document.getElementById("mydiv");
+    divElem.addEventListener("click", function () {
+      divElem.style.backgroundColor = colorsArray[Math.floor(Math.random() * colorsArray.length)];
+    });
+  }
+</script>
+
 </html>
